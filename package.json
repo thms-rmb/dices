@@ -1,0 +1,14 @@
+{
+  "name": "dices",
+  "version": "0.1.0",
+  "description": "Social dice rolling",
+  "repository": "https://github.com/thms-rmb/dices",
+  "author": "Thomas Rambø",
+  "license": "MIT",
+  "private": true,
+  "workspaces": ["packages/dices-client", "packages/dices-server"],
+  "scripts": {
+    "client-bundle": "yarn workspace dices-client bundle",
+    "serve": "yarn workspace dices-server serve"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "dices-server",
+  "version": "0.1.0",
+  "description": "Dices server",
+  "main": "index.js",
+  "repository": "https://github.com/thms-rmb/dices/tree/master/dices-server",
+  "author": "Thomas Rambø",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "dices-client": "^0.1.0",
+    "express": "^4.17.1",
+    "rpg-dice-roller": "^4.1.2",
+    "ws": "^7.3.1"
+  },
+  "scripts": {
+    "serve": "node src/index.js"
+  }
+}
