@@ -24,15 +24,12 @@ wss.on("connection", ws => {
             return;
         }
 
-        const { user, spec } = payload;
-        const { notation, total, rolls } = new DiceRoll(spec);
+        const { user, notation } = payload;
+        const roll = new DiceRoll(notation);
         const response = {
-            success: true,
             user,
-            notation,
-            total,
-            rolls: rolls[0].rolls.map(r => r.value)
-        }
+            ...roll.toJSON()
+        };
 
         wss.clients.forEach(client => {
             if (client.readyState === WebSocket.OPEN) {
